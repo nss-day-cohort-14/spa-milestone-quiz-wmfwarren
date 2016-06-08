@@ -1,0 +1,40 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": "2009",
+      "price": "14999",
+      "color": "NavyBlue",
+      "purchased": false,
+      "description": "This is a slightly sun-damaged Honda Civic with one squeaky break. It drives, though!"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model X",
+      "year": "2015",
+      "price": "90500",
+      "color": "MidnightBlack",
+      "purchased": false,
+      "description": "You know you want it, you know you need it! The Tesla Model X, 'nuff said."
+    },
+    {
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "year": "2016",
+      "price": "250000",
+      "color": "RubyRed",
+      "purchased": false,
+      "description": "This is not a cheap car, but worth at least half the price! So if you want your car to be bigger than anything else in your life, this is the car for you!"
+    }
+  ]
+}
