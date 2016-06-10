@@ -8,16 +8,17 @@ var CarLot = (function (carLot){
 		var targetCard = event.currentTarget;	
 		var targetCardID = targetCard.id;
 		var carInventory = CarLot.getInventory();
-		console.log("I stole ", targetCard, " this car");
-		//targetCard.setAttribute("style", "background-color: pink");
+		
 		for(let i = 0; i < document.getElementsByClassName("carCard").length; i++){
 			if(targetCardID === `cardID--${i}`) {
 				targetCard.style.borderColor = carInventory.cars[i].color;
 				targetCard.style.borderWidth = "3px";
 				targetCard.style.backgroundColor = "pink";
-
+				targetCard.classList.add("selected");
 			}
 		}
+
+		document.getElementById("textInput").focus();
 
 		CarLot.deavtivateCards(targetCard);
 
@@ -29,6 +30,7 @@ var CarLot = (function (carLot){
 				document.getElementById(`cardID--${i}`).style.borderColor = "black";
 				document.getElementById(`cardID--${i}`).style.borderWidth = "1px";
 				document.getElementById(`cardID--${i}`).style.backgroundColor = "white";
+				document.getElementById(`cardID--${i}`).classList.remove("selected");
 
 			}
 		}

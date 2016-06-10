@@ -17,13 +17,13 @@ function populatePage () {
 
      carInfoDOMEle.innerHTML +=
      `
-     <div id="cardID--${i}" class="carCard col-sm-4">
+     <div id="cardID--${i}" class="carCard gutter col-sm-4">
 				<h2 class="makeAndModel">${currentCar.make} ${currentCar.model}</h2>
 				<h3 class="modelYear">${currentCar.year}</h3>
 				<p class="priceTag">Your price: $${currentCar.price}</p>
 				<p class="carColor">Color: ${currentCar.color}</p>
 				<p class="carAvailable">${carAvailability}</p>
-				<p class="carDescription">${currentCar.description}</p>
+				<p id="textArea--${i}" class="carDescriptionArea">${currentCar.description}</p>
 	    </div>
      `
 
