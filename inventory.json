@@ -5,7 +5,7 @@
       "model": "Rogue",
       "year": "2006",
       "price": "8999",
-      "color": "FireBrick",
+      "color": "red",
       "purchased": false,
       "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
     },
@@ -14,7 +14,7 @@
       "model": "Civic",
       "year": "2009",
       "price": "14999",
-      "color": "NavyBlue",
+      "color": "blue",
       "purchased": false,
       "description": "This is a slightly sun-damaged Honda Civic with one squeaky break. It drives, though!"
     },
@@ -23,7 +23,7 @@
       "model": "Model X",
       "year": "2015",
       "price": "90500",
-      "color": "MidnightBlack",
+      "color": "black",
       "purchased": false,
       "description": "You know you want it, you know you need it! The Tesla Model X, 'nuff said."
     },
@@ -32,7 +32,7 @@
       "model": "Aventador",
       "year": "2016",
       "price": "250000",
-      "color": "RubyRed",
+      "color": "orange",
       "purchased": false,
       "description": "This is not a cheap car, but worth at least half the price! So if you want your car to be bigger than anything else in your life, this is the car for you!"
     }

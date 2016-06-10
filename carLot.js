@@ -1,12 +1,13 @@
-var CarLot = (function () {
+var CarLot = (function (carLot) {
   var inventory = null;
   var inventoryLoader = new XMLHttpRequest();
 
-  return {
-    getInventory: function () {
+
+    carLot.getInventory = function () {
     	return inventory;
-    },
-  	loadInventory: function() {
+    }
+
+  	carLot.loadInventory = function() {
 			inventoryLoader.addEventListener("load", function(eventData){
 				inventory = JSON.parse(inventoryLoader.responseText);
 				populatePage();
@@ -14,5 +15,6 @@ var CarLot = (function () {
 			inventoryLoader.open("GET", "inventory.json");
 			inventoryLoader.send();	
 		}
-  };
-})();
+ 
+  return carLot;
+})(CarLot || {});

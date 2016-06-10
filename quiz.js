@@ -17,11 +17,11 @@ function populatePage () {
 
      carInfoDOMEle.innerHTML +=
      `
-     <div class="col-md-4">
+     <div id="cardID--${i}" class="carCard col-sm-4">
 				<h2 class="makeAndModel">${currentCar.make} ${currentCar.model}</h2>
 				<h3 class="modelYear">${currentCar.year}</h3>
-				<p class="priceTag">Your price $${currentCar.price}</p>
-				<p class="carColor">${currentCar.color}</p>
+				<p class="priceTag">Your price: $${currentCar.price}</p>
+				<p class="carColor">Color: ${currentCar.color}</p>
 				<p class="carAvailable">${carAvailability}</p>
 				<p class="carDescription">${currentCar.description}</p>
 	    </div>
@@ -30,11 +30,12 @@ function populatePage () {
   }
   // Now that the DOM is loaded, establish all the event listeners needed
   
+  CarLot.activateEvents();
 
 }
 
-CarLot.activateEvents();
+CarLot.loadInventory();
+//CarLot.activateEvents();
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
-// CarLot.loadInventory();
-//populatePage();
+
