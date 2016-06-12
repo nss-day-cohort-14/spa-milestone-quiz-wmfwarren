@@ -2,11 +2,6 @@
 	border: black solid 1px;
 }
 
-.carCardBigBorder {
-	border: black solid 2px;
-	background-color: pink;
-}
-
 #navBar input {
 	display: block;
 	margin: 0 auto;
@@ -17,6 +12,6 @@
 }
 
 .gutter {
-
+	padding: 0 5px 10px 5px;
 }
 
