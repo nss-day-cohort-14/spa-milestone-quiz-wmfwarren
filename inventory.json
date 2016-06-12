@@ -33,8 +33,18 @@
       "year": "2016",
       "price": "250000",
       "color": "orange",
-      "purchased": false,
+      "purchased": true,
       "description": "This is not a cheap car, but worth at least half the price! So if you want your car to be bigger than anything else in your life, this is the car for you!"
+    },
+    {
+
+      "make": "AMC",
+      "model": "Gremlin",
+      "year": "1970",
+      "price": "250",
+      "color": "teal",
+      "purchased": true,
+      "description": "This is the original, baby! A super stud's vehicle to be sure. Just don't put your foot through the hole in the floor."
     }
   ]
 }

@@ -8,7 +8,11 @@
 }
 
 .carDescriptionArea {
-	height: 5em;
+	height: 7em;
+}
+
+.makeAndModel {
+	height: 2em;
 }
 
 .gutter {
