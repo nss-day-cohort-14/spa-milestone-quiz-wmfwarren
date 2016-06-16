@@ -3,7 +3,7 @@ function populatePage (inventory) {
 
   // Now that the DOM is loaded, establish all the event listeners needed
   var carInfoDOMEle = document.getElementById("carInfoContainer");
-  var card = "";
+  // var card = "";
   
   for(let i = 0; i < inventory.cars.length; i++){
 		currentCar = inventory.cars[i];
@@ -14,24 +14,68 @@ function populatePage (inventory) {
 				return "The car is not available for purchase";
 			}
 			})();
-			if ( i % 3 === 0) {
-				carInfoDOMEle.innerHTML += `<div class="row">`
-			} 
-			card += 
-					`<div id="cardID--${i}" class="carCard gutter col-sm-4">
-					<h2 class="makeAndModel">${currentCar.make} ${currentCar.model}</h2>
-					<h3 class="modelYear">${currentCar.year}</h3>
-					<p class="priceTag">Your price: $${currentCar.price}</p>
-					<p class="carColor">Color: ${currentCar.color}</p>
-					<p class="carAvailable">${carAvailability}</p>
-					<p id="textArea--${i}" class="carDescriptionArea">${currentCar.description}</p>
-					</div>`;
-			carInfoDOMEle.innerHTML += card;
-			if (i % 3 === 2){
-				carInfoDOMEle.innerHTML += '</div>';
+
+			if (i % 3 === 0){ //create a new row div every even multiple of 3 card
+				let newRowDiv = document.createElement("div");
+				let rowClass = document.createAttribute("class");
+				let rowID = document.createAttribute("id");
+				let rowIDNum = Math.floor(i / 3);
+				rowClass.value = "row";
+				rowID.value = `row--${rowIDNum}`;
+				newRowDiv.setAttributeNode(rowClass)
+				newRowDiv.setAttributeNode(rowID)
+				carInfoDOMEle.appendChild(newRowDiv);
+				var currentRow = document.getElementById(`row--${rowIDNum}`); //this is used to append cards later
 			}
-		
-		card = "";
+			//create the current card
+			let newCarDiv = document.createElement("div");
+			let newCarMakeAndModel = document.createElement("h2");
+			newCarMakeAndModel.innerText = `${currentCar.make} ${currentCar.model}`;
+			let newCarYear = document.createElement("h3");
+			newCarYear.innerText = `${currentCar.year}`;
+			let newCarPrice = document.createElement("p");
+			newCarPrice.innerText = `$${currentCar.price}`;
+			let newCarColor = document.createElement("p");
+			newCarColor.innerText = `${currentCar.color}`;
+			let newCarAvailable = document.createElement("p");
+			newCarAvailable.innerText = `${carAvailability}`;
+			let newCarText = document.createElement("p");
+			newCarText.innerText = `${currentCar.description}`;
+
+			let newCarDivID = document.createAttribute("id");
+			let newCarDivClass = document.createAttribute("class");
+			let newCarColorID = document.createAttribute("id");
+			let newCarTextID = document.createAttribute("id");
+
+			let newCarMakeAndModelClass = document.createAttribute("class");
+			newCarMakeAndModelClass.value = "makeAndModel";
+			let newCarTextClass = document.createAttribute("class");
+			newCarTextClass.value = "carDescriptionArea";
+
+			newCarDivID.value = `carCard--${i}`;
+			newCarDivClass.value = "carCard col-sm-4";
+			newCarColorID.value = `carColor--${i}`;
+			newCarTextID.value = `textArea--${i}`;
+
+			newCarDiv.setAttributeNode(newCarDivID);
+			newCarDiv.setAttributeNode(newCarDivClass);
+			newCarColor.setAttributeNode(newCarColorID);
+			newCarMakeAndModel.setAttributeNode(newCarMakeAndModelClass);
+			newCarText.setAttributeNode(newCarTextID);
+			newCarText.setAttributeNode(newCarTextClass);
+			
+			currentRow.appendChild(newCarDiv);
+
+			let carCardDiv = document.getElementById(`carCard--${i}`);
+
+			carCardDiv.appendChild(newCarMakeAndModel);
+			carCardDiv.appendChild(newCarYear);
+			carCardDiv.appendChild(newCarPrice);
+			carCardDiv.appendChild(newCarColor);
+			carCardDiv.appendChild(newCarAvailable);
+			carCardDiv.appendChild(newCarText);
+
+			carCardDiv.style.borderColor = currentCar.color;
 	}
 	CarLot.activateEvents();
 };

@@ -1,8 +1,8 @@
 var CarLot = (function (carLot) {
-  var inventory = {};
+  var inventory = null;
 
     carLot.getInventory = function () { //this function gets and returns the inventory
-    	return carLot.inventory;
+    	return inventory;
     };
 
     carLot.loadInventory = function (popPage) { //this function loads and parses the JSON
