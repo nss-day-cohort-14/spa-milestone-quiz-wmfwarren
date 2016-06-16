@@ -51,6 +51,8 @@ function populatePage (inventory) {
 			newCarMakeAndModelClass.value = "makeAndModel";
 			let newCarTextClass = document.createAttribute("class");
 			newCarTextClass.value = "carDescriptionArea";
+			let carAvailabilityClass = document.createAttribute("class");
+			carAvailabilityClass.value = "availability";
 
 			newCarDivID.value = `carCard--${i}`;
 			newCarDivClass.value = "carCard col-sm-4";
@@ -63,6 +65,7 @@ function populatePage (inventory) {
 			newCarMakeAndModel.setAttributeNode(newCarMakeAndModelClass);
 			newCarText.setAttributeNode(newCarTextID);
 			newCarText.setAttributeNode(newCarTextClass);
+			newCarAvailable.setAttributeNode(carAvailabilityClass);
 			
 			currentRow.appendChild(newCarDiv);
 

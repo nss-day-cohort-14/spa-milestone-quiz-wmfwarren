@@ -1,12 +1,13 @@
 var CarLot = (function(carLot){
-
-	carLot.selectCard = function (event, CarLot.getInventory().cars[i].color){
+//gets and activates the selected card
+	carLot.selectCard = function (event, color){
 		targetCard = event.currentTarget;
 		//set target card styles
-		targetCard.style.borderWidth = "3px";
+		targetCard.style.borderWidth = "5px";
 		targetCard.style.backgroundColor = `${color}`;
+		targetCard.style.color = "white";
 		targetCard.classList.add("selected");
-
+	//call the function to deactivate any other activated cards. 
 		CarLot.deavtivateCards(targetCard);
 	};
 	
@@ -17,8 +18,8 @@ var CarLot = (function(carLot){
 			if(target.id !== `carCard--${i}`) {
 				document.getElementById(`carCard--${i}`).style.borderWidth = "1px";
 				document.getElementById(`carCard--${i}`).style.backgroundColor = "white";
+				document.getElementById(`carCard--${i}`).style.color = "black";
 				document.getElementById(`carCard--${i}`).classList.remove("selected");
-
 			}
 		}
 	};

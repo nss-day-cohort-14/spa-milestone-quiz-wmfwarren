@@ -4,7 +4,7 @@ var CarLot = (function (carLot) {
     carLot.getInventory = function () { //this function gets and returns the inventory
     	return inventory;
     };
-
+  //This function loads all the information from the JSON file
     carLot.loadInventory = function (popPage) { //this function loads and parses the JSON
       var inventoryLoader = new XMLHttpRequest();
 

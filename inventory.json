@@ -23,7 +23,7 @@
       "model": "Model X",
       "year": "2015",
       "price": "90500",
-      "color": "black",
+      "color": "brown",
       "purchased": false,
       "description": "You know you want it, you know you need it! The Tesla Model X, 'nuff said."
     },
@@ -45,6 +45,25 @@
       "color": "teal",
       "purchased": true,
       "description": "This is the original, baby! A super stud's vehicle to be sure. Just don't put your foot through the hole in the floor."
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "year": "1999",
+      "price": "350000",
+      "color": "hotpink",
+      "purchased": false,
+      "description": "If this car is worthy of the great James Bond then how can it more be more than good enough for the likes of you?"
+    },
+    {
+      "make": "Ford",
+      "model": "Model T",
+      "year": "1908",
+      "price": "1530000",
+      "color": "black",
+      "purchased": true,
+      "description": "This is the actual original original by Henry F, the one and only. Good Detroit construction, no German engineering"
+    
     }
   ]
 }
