@@ -18,3 +18,8 @@
 .availability {
 	height: 2.5em;
 }
+
+.selected {
+	background-color: pink;
+	border-width: 5px;
+}

@@ -3,12 +3,13 @@ var CarLot = (function(carLot){
 	carLot.selectCard = function (event, color){
 		targetCard = event.currentTarget;
 		//set target card styles
-		targetCard.style.borderWidth = "5px";
-		targetCard.style.backgroundColor = `${color}`;
-		targetCard.style.color = "white";
 		targetCard.classList.add("selected");
+		targetCard.classList.remove("deselected");
 	//call the function to deactivate any other activated cards. 
 		CarLot.deavtivateCards(targetCard);
+
+		document.getElementById("textInput").focus();
+		document.getElementById("textInput").value = "";
 	};
 	
 	//the purpose of this function deactivates all cards but the selected car.
@@ -16,10 +17,10 @@ var CarLot = (function(carLot){
 
 		for(let i = 0; i < document.getElementsByClassName("carCard").length; i++){
 			if(target.id !== `carCard--${i}`) {
-				document.getElementById(`carCard--${i}`).style.borderWidth = "1px";
-				document.getElementById(`carCard--${i}`).style.backgroundColor = "white";
-				document.getElementById(`carCard--${i}`).style.color = "black";
-				document.getElementById(`carCard--${i}`).classList.remove("selected");
+				unTargetCard = document.getElementById(`carCard--${i}`);
+
+				unTargetCard.classList.remove("selected");
+				unTargetCard.classList.add("deselected");
 			}
 		}
 	};
