@@ -9,6 +9,7 @@
 
 .carDescriptionArea {
 	height: 7em;
+	overflow-wrap: break-word;
 }
 
 .makeAndModel {
@@ -22,4 +23,10 @@
 .selected {
 	background-color: pink;
 	border-width: 5px;
+}
+
+.deselected {
+	border-width: 1px;
+	background-color: white;
+
 }

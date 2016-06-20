@@ -24,9 +24,9 @@ var CarLot = (function(carLot){
 	};
 //This function activates the events for the DOM
 	carLot.activateEvents = function (){
-		var button = document.getElementById("textInputButton");
+		var textArea = document.getElementById("textInput");
 		var inventory = CarLot.getInventory;
-		button.addEventListener("click", applyNewDescritionToCard);
+		textArea.addEventListener("input", applyNewDescritionToCard);
 
 		for (let i = 0; i < CarLot.getInventory().cars.length; i++){
 			document.getElementById(`carCard--${i}`).addEventListener("click", function(click){
