@@ -1,0 +1,32 @@
+.carCard {
+	border: black solid 1px;
+}
+
+#navBar input {
+	display: block;
+	margin: 0 auto;
+}
+
+.carDescriptionArea {
+	height: 7em;
+	overflow-wrap: break-word;
+}
+
+.makeAndModel {
+	height: 2em;
+}
+
+.availability {
+	height: 2.5em;
+}
+
+.selected {
+	background-color: pink;
+	border-width: 5px;
+}
+
+.deselected {
+	border-width: 1px;
+	background-color: white;
+
+}
